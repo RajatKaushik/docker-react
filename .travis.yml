@@ -9,4 +9,4 @@ before_install:
 
 script:
   # - docker-compose up --build tests
- - docker run rajatkaushik/docker-react npm run test --watchAll=false
+ - docker run rajatkaushik/docker-react npm test
