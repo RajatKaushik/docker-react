@@ -10,3 +10,16 @@ before_install:
 script:
   # - docker-compose up --build tests
  - docker run rajatkaushik/docker-react npm test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-react"
+  env: "DockerReact-env"
+  bucket_name: "elasticbeanstalk-us-east-2-138422526254"
+  bucket_path: "docker-react" 
+  on:
+    branch: master
+  access_key: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
