@@ -9,7 +9,7 @@ before_install:
 
 script:
   # - docker-compose up --build tests
- - docker run rajatkaushik/docker-react
+#  - docker run -p 80:80 rajatkaushik/docker-react
 
 deploy:
   provider: elasticbeanstalk
