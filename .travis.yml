@@ -5,11 +5,11 @@ services:
 
 before_install: 
 # This was before the COPY in the dockerfile.dev commented, as I'm now using docker-compose so, no need
- - docker build -t rajatkaushik/docker-react -f Dockerfile.dev .
+ - docker build -t rajatkaushik/docker-react .
 
 script:
   # - docker-compose up --build tests
- - docker run rajatkaushik/docker-react npm test
+ - docker run rajatkaushik/docker-react
 
 deploy:
   provider: elasticbeanstalk
